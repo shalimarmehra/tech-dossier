@@ -10,23 +10,28 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ContactUs from "./Pages/ContactUs";
 import PrivateRoute from "./Components/PrivateRoute";
+import OnlyAdminPrivateRoute from "./Components/OnlyAdminPrivateRoute";
+import CreatePost from "./Pages/CreatePost";
 
 function App() {
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route element={<PrivateRoute/>}>
+        <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+        <Route element={<OnlyAdminPrivateRoute />}>
+          <Route path="/create-post" element={<CreatePost />} />
         </Route>
         <Route path="/services" element={<Services />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }
