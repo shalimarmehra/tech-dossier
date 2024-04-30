@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Custom-1;
+    src: url(./assets/fonts/Moonstrike-nRqzP.otf);
+}
+
+@font-face {
+    font-family: Custom-2;
+    src: url(./assets/fonts/DomaineDisp-Regular.otf);
+}
+
+@font-face {
+    font-family: Custom-3;
+    src: url(./assets/fonts/DomaineDisp-Regular.otf);
+}
+
+@font-face {
+    font-family: Custom-4;
+    src: url(./assets/fonts/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Custom-5;
+    src: url(./assets/fonts/OpenSans-Semibold.ttf);
+}
+
 body{
     height: 100vh;
 }
@@ -37,5 +62,5 @@ a.post-content a:hover{
 }
 
 .dark .post-content a{
-    color: green;
+    color: blue;
 }

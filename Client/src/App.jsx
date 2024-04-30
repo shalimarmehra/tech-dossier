@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import SignIn from "./Pages/SignIn";
 import Dashboard from "./Pages/Dashboard";
-import Services from "./Pages/Services";
+// import Services from "./Pages/Services";
 import SignUp from "./Pages/SignUp";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -34,7 +34,7 @@ function App() {
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:postId" element={<UpdatePost />} />
         </Route>
-        <Route path="/services" element={<Services />} />
+        {/* <Route path="/services" element={<Services />} /> */}
         <Route path="/post/:postSlug" element={<PostPage />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/contact-us" element={<ContactUs />} />

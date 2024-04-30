@@ -1,7 +1,7 @@
 import { Alert, Button, TextInput, Modal } from "flowbite-react";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import {
   getDownloadURL,
   getStorage,
@@ -223,14 +223,24 @@ export default function DashProfile() {
           onChange={handleChange}
           defaultValue="********"
         />
-        <Button
-          type="submit"
+        {/* <Button
+          
           gradientDuoTone="purpleToBlue"
           outline
+          
+        > */}
+        <Button
+          type="submit"
           disabled={loading || imageFileUploading}
+          class="relative px-5 py-2 mx-2 font-medium text-white group"
         >
-          {loading ? 'Loading...' : 'Update'}
+          <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-blue-500 group-hover:bg-blue-700 group-hover:skew-x-12"></span>
+          <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-blue-700 group-hover:bg-blue-500 group-hover:-skew-x-12"></span>
+          <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-blue-600 -rotate-12"></span>
+          <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-blue-400 -rotate-12"></span>
+          <span className="relative w-full">Update</span>
         </Button>
+        {/* </Button> */}
         {currentUser.isAdmin && (
           <Link to={"/create-post"}>
             <Button

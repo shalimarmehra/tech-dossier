@@ -4,6 +4,7 @@ import { Link, json, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signInSuccess, signInStart, signInFailure } from "../redux/user/userSlice";
 import OAuth from "../Components/OAuth";
+import logo from '../assets/logo/logo3.png'
 
 function SignIn() {
   const [formData, setFormData] = useState({});
@@ -39,22 +40,14 @@ function SignIn() {
   };
   return (
     <div className="min-h-screen mt-20">
-      <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
+      <div className="p-3 max-w-4xl mx-auto md:items-center gap-5">
         {/* Left Side */}
-        <div className="flex-1">
+        <div className="mb-10">
           {/* Logo Section with the Home Link */}
-          <Link to="/" className="font-bold dark:text-white text-4xl">
-            <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
-              Tech
-            </span>
-            <span>Dossier</span>
+          <Link to="/" className="">
+          <h1 className="self-center text-5xl font-custom1 text-center border-b border-blue-500 rounded-3xl">Sign in</h1>
+          {/* <img className="w-48 max-sm:w-96" src={logo} alt="My Image" /> */}
           </Link>
-          <p className="text-sm mt-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
-            repudiandae culpa aut earum quaerat, reprehenderit porro saepe
-            laborum, neque iusto suscipit enim! Veritatis eaque deleniti, veniam
-            molestias doloremque dignissimos quae.
-          </p>
         </div>
         {/*Right Side */}
         <div className="flex-1">
@@ -75,7 +68,7 @@ function SignIn() {
                 onChange={handleChange}
               />
             </div>
-            <Button gradientDuoTone="purpleToPink" type="submit" disabled={loading}>
+            <Button gradientDuoTone="purpleToBlue" type="submit" disabled={loading}>
               {
                 loading ? ( 
                 <>

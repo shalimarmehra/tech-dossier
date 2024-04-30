@@ -134,12 +134,8 @@ export default function DashPosts() {
             ))}
           </Table>
           {showMore && (
-            <button
-              onClick={handleShowMore}
-              className='w-full text-teal-500 self-center text-sm py-7'
-            >
-              Show more
-            </button>
+              <Button color='blue' onClick={handleShowMore} className="w-full self-center text-sm my-7">Show More</Button>
+            
           )}
         </>
       ) : (
