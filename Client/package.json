@@ -34,7 +34,8 @@
     "react-social": "^1.10.0",
     "react-timestamp": "^6.0.0",
     "redux-persist": "^6.0.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tech-dossier": "file:.."
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",

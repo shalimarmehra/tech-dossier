@@ -232,7 +232,7 @@ export default function DashProfile() {
         <Button
           type="submit"
           disabled={loading || imageFileUploading}
-          class="relative px-5 py-2 mx-2 font-medium text-white group"
+          classNamw="relative px-5 py-2 mx-2 font-medium text-white group"
         >
           <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-blue-500 group-hover:bg-blue-700 group-hover:skew-x-12"></span>
           <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-blue-700 group-hover:bg-blue-500 group-hover:-skew-x-12"></span>

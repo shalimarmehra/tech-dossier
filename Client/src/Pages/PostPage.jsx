@@ -122,39 +122,39 @@ export default function PostPage() {
       <CommentSection postId={post._id} />
 
       {/* Social Media */}
-      <section class="flex flex-col md:flex-row bg-blue-100 dark:bg-blue-900 rounded-b-lg">
-        <div class="flex-1 m-6">
-          <p class="text-2xl text-center">𝐹𝑜𝓁𝓁𝑜𝓌 𝑀𝑒 𝑜𝓃 : </p>
-          <hr class="my-4" />
-          <div class="flex flex-wrap justify-center gap-1">
+      <section className="flex flex-col md:flex-row bg-blue-100 dark:bg-blue-900 rounded-b-lg">
+        <div className="flex-1 m-6">
+          <p className="text-2xl text-center">𝐹𝑜𝓁𝓁𝑜𝓌 𝑀𝑒 𝑜𝓃 : </p>
+          <hr className="my-4" />
+          <div className="flex flex-wrap justify-center gap-1">
             <a href="https://twitter.com/shalimarmehra">
-              <button class="bg-black rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
-                <i class="fab fa-twitter mr-1"></i> Twitter ( X )
+              <button className="bg-black rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
+                <i className="fab fa-twitter mr-1"></i> Twitter ( X )
               </button>
             </a>
             <a href="https://www.linkedin.com/in/shalimar-mehra/">
-              <button class="bg-[#0077B5] text-white rounded-lg text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
-                <i class="fab fa-linkedin mr-1"></i> Linked In
+              <button className="bg-[#0077B5] text-white rounded-lg text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
+                <i className="fab fa-linkedin mr-1"></i> Linked In
               </button>
             </a>
             <a href="https://www.instagram.com/shalimarmehra/">
-              <button class="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white rounded-lg text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
-                <i class="fab fa-instagram mr-1"></i> Instagram
+              <button className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white rounded-lg text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
+                <i className="fab fa-instagram mr-1"></i> Instagram
               </button>
             </a>
             <a href="https://github.com/shalimarmehra">
-              <button class="bg-[#171515] rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
-                <i class="fab fa-github mr-1"></i> Github
+              <button className="bg-[#171515] rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
+                <i className="fab fa-github mr-1"></i> Github
               </button>
             </a>
             <a href="https://www.facebook.com/shalimar.mehra.7/">
-              <button class="bg-[#1877F2] rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
-                <i class="fab fa-facebook mr-1"></i> Facebook
+              <button className="bg-[#1877F2] rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
+                <i className="fab fa-facebook mr-1"></i> Facebook
               </button>
             </a>
             <a href="https://www.youtube.com/@shalimarmehra">
-              <button class="bg-[#FF0000] rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
-                <i class="fab fa-youtube mr-1"></i> Youtube
+              <button className="bg-[#FF0000] rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
+                <i className="fab fa-youtube mr-1"></i> Youtube
               </button>
             </a>
           </div>
