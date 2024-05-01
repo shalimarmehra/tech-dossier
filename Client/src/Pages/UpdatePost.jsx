@@ -8,13 +8,16 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { app } from "../firebase";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import JoditEditor from "jodit-react";
 
 export default function UpdatePost() {
+  const editor = useRef(null);
+
   const [file, setFile] = useState(null);
   const [imageUploadProgress, setImageUploadProgress] = useState(null);
   const [imageUploadError, setImageUploadError] = useState(null);
@@ -136,6 +139,7 @@ export default function UpdatePost() {
             <option value="javascript">JavaScript</option>
             <option value="reactjs">React.js</option>
             <option value="nextjs">Next.js</option>
+            <option value="social-media">Social-Media</option>
           </Select>
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">
@@ -172,11 +176,10 @@ export default function UpdatePost() {
             className="w-full h-72 object-cover"
           />
         )}
-        <ReactQuill
-          theme="snow"
+        <JoditEditor
+          ref={editor}
           value={formData.content}
-          placeholder="Write something..."
-          className="h-72 mb-12"
+          className="h-72 mb-12 pb-20"
           required
           onChange={(value) => {
             setFormData({ ...formData, content: value });

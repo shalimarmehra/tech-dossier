@@ -144,6 +144,7 @@ export default function Search() {
                 <option value="reactjs">React.js</option>
                 <option value="nextjs">Next.js</option>
                 <option value="javascript">JavaScript</option>
+                <option value="social-media">Social Media</option>
               </Select>
             </div>
           </div>

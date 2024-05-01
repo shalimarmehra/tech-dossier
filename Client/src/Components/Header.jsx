@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from "react";
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  Navbar,
-  NavbarToggle,
-  TextInput,
-  Avatar,
-} from "flowbite-react";
+import { Button, Dropdown, Navbar, NavbarToggle, Avatar } from "flowbite-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "../redux/theme/themeSlice";
 import { signoutSuccess } from "../redux/user/userSlice";
-// import logo from '../assets/logo/logo3.png'
 
 function Header() {
   const path = useLocation().pathname;
@@ -65,21 +56,8 @@ function Header() {
           to="/"
           className="self-center whitespace-nowrap dark:text-blue-500 text-blue-700"
         >
-          {/* <img className="w-20" src={logo} alt="My Image" /> */}
           <h1 className="text-6xl font-custom1">SM</h1>
         </Link>
-
-        {/* Search Section */}
-        {/* <form >
-          <TextInput
-            
-            
-            // righticon={AiOutlineSearch}
-            className="hidden lg:inline rounded-xl"
-            
-            
-          />
-        </form> */}
 
         <form class="max-w-md mx-auto max-sm:hidden" onSubmit={handleSubmit}>
           <label
@@ -125,12 +103,6 @@ function Header() {
             </button>
           </div>
         </form>
-
-        {/* Search Section for Small Device */}
-        {/* <Button className="w-12 h-10 lg:hidden" color="gray">
-          <AiOutlineSearch />
-        </Button> */}
-        {/* Drak Mode Enable Section */}
         <div className="flex ml-10 gap-2 md:order-2">
           <button
             className="w-12 h-10 sm:inline"
@@ -166,9 +138,6 @@ function Header() {
               <Button gradientDuoTone="purpleToBlue" outline>
                 Sign In
               </Button>
-              {/* <Button gradientDuoTone='purpletoBlue'>
-                Sign In
-            </Button> */}
             </Link>
           )}
 

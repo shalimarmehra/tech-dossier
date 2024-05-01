@@ -4,6 +4,7 @@ import { CgWebsite } from "react-icons/cg";
 
 function About() {
   return (
+    // About Me
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-md:p-10 pl-20 pr-20 text-center w-full md:m-20">
         <div>
@@ -85,6 +86,7 @@ function About() {
           </div>
           <br />
           <br />
+          {/* Social Media */}
           <section class="flex flex-col md:flex-row bg-blue-100 dark:bg-blue-900 rounded-b-lg mb-10">
             <div class="flex-1 m-6">
               <p class="text-2xl text-center">𝐹𝑜𝓁𝓁𝑜𝓌 𝑀𝑒 𝑜𝓃 :</p>
@@ -125,7 +127,7 @@ function About() {
                   </button>
                 </a>
                 <a
-                  href="https://www.youtube.com/@shalimarmehra"
+                  href="https://www.youtube.com/@shalimarmehra?sub_confirmation=1"
                   target="_blank"
                 >
                   <button class="bg-[#FF0000] rounded-lg text-white text-xs text-center self-center px-3 py-2 my-2 mx-2 shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">

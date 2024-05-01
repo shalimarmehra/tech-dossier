@@ -30,7 +30,7 @@ function SignUp() {
       }
       setLoading(false);
       if (res.ok) {
-        navigate('/sign-in');        
+        navigate("/sign-in");
       }
     } catch (error) {
       setErrorMessage(error.message);
@@ -44,8 +44,9 @@ function SignUp() {
         <div className="mb-10">
           {/* Logo Section with the Home Link */}
           <Link to="/" className="">
-          <h1 className="self-center text-5xl font-custom1 text-center border-b border-blue-500 rounded-3xl">Sign up</h1>
-          {/* <img className="w-48 max-sm:w-96" src={logo} alt="My Image" /> */}
+            <h1 className="self-center text-5xl font-custom1 text-center border-b border-blue-500 rounded-3xl">
+              Sign up
+            </h1>
           </Link>
         </div>
         {/*Right Side */}
@@ -74,17 +75,21 @@ function SignUp() {
                 onChange={handleChange}
               />
             </div>
-            <Button gradientDuoTone="purpleToBlue" type="submit" disabled={loading}>
-              {
-                loading ? ( 
+            <Button
+              gradientDuoTone="purpleToBlue"
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? (
                 <>
-                <Spinner size='sm'/>
-                <span className="pl-3">Loading...</span>
+                  <Spinner size="sm" />
+                  <span className="pl-3">Loading...</span>
                 </>
-              ) : 'Sign Up'
-              }
+              ) : (
+                "Sign Up"
+              )}
             </Button>
-            <OAuth/>
+            <OAuth />
           </form>
           <div className="flex gap-2 text-sm mt-5">
             <span>Have an account?</span>

@@ -12,7 +12,7 @@ function HomeSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    waitForAnimate: false
+    waitForAnimate: false,
   };
   return (
     <div className="w-3/4 max-sm:w-full m-auto">
@@ -24,11 +24,14 @@ function HomeSlider() {
               className="bg-gray-300 h-[450px] text-black rounded-xl shadow-2xl dark:bg-blue-100"
             >
               <div className="h-56 bg-blue-700 flex justify-center items-center rounded-t-xl">
-                <img src="https://img.freepik.com/free-photo/mountains-with-snow-trees_1048-2411.jpg?size=626&ext=jpg&ga=GA1.1.1705952227.1713857647&semt=ais" alt="" className="h-full w-full" />
+                <img
+                  src="https://img.freepik.com/free-photo/mountains-with-snow-trees_1048-2411.jpg?size=626&ext=jpg&ga=GA1.1.1705952227.1713857647&semt=ais"
+                  alt=""
+                  className="h-full w-full"
+                />
               </div>
 
               <div className="flex flex-col items-center justify-center gap-4 p-4">
-                {/* <p className="text-xl font-semibold">{d.name}</p> */}
                 <p className="text-center mt-10">{d.review}</p>
                 <button className="bg-blue-700 hover:bg-blue-100 text-white hover:text-blue-700 text-lg px-8 py-2 rounded-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-10 duration-300">
                   Read Article

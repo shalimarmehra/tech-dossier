@@ -2,13 +2,16 @@ import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, json, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { signInSuccess, signInStart, signInFailure } from "../redux/user/userSlice";
+import {
+  signInSuccess,
+  signInStart,
+  signInFailure,
+} from "../redux/user/userSlice";
 import OAuth from "../Components/OAuth";
-import logo from '../assets/logo/logo3.png'
 
 function SignIn() {
   const [formData, setFormData] = useState({});
-  const {loading, error: errorMessage} = useSelector(state => state.user);
+  const { loading, error: errorMessage } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -17,7 +20,7 @@ function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.email || !formData.password) {
-      return dispatch(signInFailure('Please fill all the fields'))
+      return dispatch(signInFailure("Please fill all the fields"));
     }
     try {
       dispatch(signInStart());
@@ -32,7 +35,7 @@ function SignIn() {
       }
       if (res.ok) {
         dispatch(signInSuccess(data));
-        navigate('/');        
+        navigate("/");
       }
     } catch (error) {
       dispatch(signInFailure(error.message));
@@ -45,8 +48,9 @@ function SignIn() {
         <div className="mb-10">
           {/* Logo Section with the Home Link */}
           <Link to="/" className="">
-          <h1 className="self-center text-5xl font-custom1 text-center border-b border-blue-500 rounded-3xl">Sign in</h1>
-          {/* <img className="w-48 max-sm:w-96" src={logo} alt="My Image" /> */}
+            <h1 className="self-center text-5xl font-custom1 text-center border-b border-blue-500 rounded-3xl">
+              Sign in
+            </h1>
           </Link>
         </div>
         {/*Right Side */}
@@ -68,17 +72,21 @@ function SignIn() {
                 onChange={handleChange}
               />
             </div>
-            <Button gradientDuoTone="purpleToBlue" type="submit" disabled={loading}>
-              {
-                loading ? ( 
+            <Button
+              gradientDuoTone="purpleToBlue"
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? (
                 <>
-                <Spinner size='sm'/>
-                <span className="pl-3">Loading...</span>
+                  <Spinner size="sm" />
+                  <span className="pl-3">Loading...</span>
                 </>
-              ) : 'Sign In'
-              }
+              ) : (
+                "Sign In"
+              )}
             </Button>
-            <OAuth/>
+            <OAuth />
           </form>
           <div className="flex gap-2 text-sm mt-5">
             <span>Don't Have an account?</span>

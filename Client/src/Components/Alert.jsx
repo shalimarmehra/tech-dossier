@@ -19,7 +19,9 @@ function Alert(props) {
           class=" text-center mt-5 text-green-800 dark:text-green-400"
           role="alert"
         >
-          <div class="text-sm max-sm:text-xs font-medium ">{props.alert.msgTwo}</div>
+          <div class="text-sm max-sm:text-xs font-medium ">
+            {props.alert.msgTwo}
+          </div>
         </div>
       </>
     )

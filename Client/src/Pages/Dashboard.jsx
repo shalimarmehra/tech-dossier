@@ -18,21 +18,21 @@ function Dashboard() {
     }
   }, [location.search]);
   return (
-  <div className="min-h-screen flex flex-col md:flex-row">
-    <div className="md:w-56">
-      <DashSidebar/>
+    <div className="min-h-screen flex flex-col md:flex-row">
+      <div className="md:w-56">
+        <DashSidebar />
+      </div>
+      {tab === "profile" && <DashProfile />}
+      {/* DashBoard */}
+      {tab === "dash" && <DashboardComp />}
+      {/* Posts */}
+      {tab === "posts" && <DashPosts />}
+      {/* Users */}
+      {tab === "users" && <DashUsers />}
+      {/* Comments */}
+      {tab === "comments" && <DashComments />}
     </div>
-    {tab === 'profile' && <DashProfile/>}
-    {/* DashBoard */}
-    {tab === 'dash' && <DashboardComp/>}
-    {/* Posts */}
-    {tab === 'posts' && <DashPosts/>}
-    {/* Users */}
-    {tab === 'users' && <DashUsers/>}
-    {/* Comments */}
-    {tab === 'comments' && <DashComments/> }
-  </div>
-  )
+  );
 }
 
 export default Dashboard;

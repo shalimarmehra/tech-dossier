@@ -11,31 +11,6 @@ const options = {
 
 export default function PostCard({ post }) {
   return (
-    // <div className='group relative w-full hover:border-2 h-[400px] overflow-hidden rounded-lg sm:w-[430px] transition-all shadow-2xl dark:shadow-gray-800'>
-    //   <Link to={`/post/${post.slug}`}>
-    //   <span className='italic text-sm bg-blue-700 text-white mx-0 my-2 px-2 rounded-md float-left'>{post.category}</span>
-    //   <span className='float-right italic text-sm bg-blue-700 text-white mx-0 my-2 px-2 rounded-md'>{post && new Date(post.createdAt).toLocaleDateString()}</span>
-    //     <img
-    //       src={post.image}
-    //       alt='post cover'
-    //       className='h-[260px] w-full  object-cover group-hover:h-[200px] transition-all duration-300 z-20'
-    //     />
-    //   </Link>
-    //   <div className='p-3 flex flex-col gap-2'>
-    //     <p className='text-lg font-semibold line-clamp-2'>{post.title}</p>
-    //     <div className='flex justify-center p-3 mx-auto w-full max-w-2xl text-xs'>
-    //     <span className='italic bg-blue-700 text-white mx-0 my-0 px-2 rounded-md'>
-    //       {post && (post.content.length / 1000).toFixed(0)} mins read
-    //     </span>
-    //   </div>
-    //     <Link
-    //       to={`/post/${post.slug}`}
-    //       className='z-10 group-hover:bottom-0 absolute bottom-[-200px] left-0 right-0 border hover:text-black border-blue-700 text-blue-500 hover:bg-blue-100 transition-all duration-300 text-center py-2 rounded-md !rounded-tl-none m-2 dark:text-white hover:dark:border-blue-700 dark:hover:bg-blue-700 dark:border-blue-100'
-    //     >
-    //       Read article
-    //     </Link>
-    //   </div>
-    // </div>
     <div className="relative w-full h-[500px] overflow-hidden rounded-lg sm:w-[430px] shadow-2xl dark:shadow-gray-800 hover:shadow-blue-200 hover:bg-blue-200 dark:hover:bg-gray-700 m-5 hover:shadow-2xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-10 duration-300">
       <Link to={`/post/${post.slug}`}>
         <span className="italic text-sm bg-blue-700 text-white mx-2 my-2 px-6 ml-4 rounded-full float-left">
