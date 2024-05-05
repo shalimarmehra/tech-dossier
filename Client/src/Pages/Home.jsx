@@ -22,14 +22,14 @@ export default function Home() {
   return (
     <div>
       {/* Home Page Slider */}
-      <div className="mb-10">
+      {/* <div className="mb-10">
         <HomeSlider />
-      </div>
+      </div> */}
       {/* Reacents Posts */}
       <div className=" mx-auto p-3 flex flex-col gap-8 py-7">
         {posts && posts.length > 0 && (
           <div className="flex flex-col gap-6">
-            <h2 className="text-3xl font-semibold text-center font-custom3 border-b border-blue-500 rounded-3xl">
+            <h2 className="text-3xl font-semibold text-center font-custom3 border-b border-blue-500 rounded-3xl pb-5">
               Recents Posts
             </h2>
             <div className="flex flex-wrap gap-4 justify-center text-center">
